@@ -11,6 +11,7 @@ type IDb interface {
     FindOne(queryString string, mapper RowMapper, val ...interface{}) (result interface{}, e error)
     FindAll(queryString string, mapper RowMapper, val ...interface{}) (result []interface{}, e error)
     Execute(queryString string, val ...interface{}) (result interface{}, e error)
+    ShopDatabase() (err error)
 }
 
 type RowMapper interface {
